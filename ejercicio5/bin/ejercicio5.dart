@@ -1,18 +1,9 @@
 import "dart:io";
+import "package:ejercicio5/funciones.dart";
 
 void main() {
   stdout.write("Ingrese una frase: ");
   String frase = stdin.readLineSync()!.toLowerCase();
-
-  List<String> palabras = frase.split(" ");
-  Map<String, int> frecuencia = {};
-
-  for (String palabra in palabras) {
-    frecuencia[palabra] = (frecuencia[palabra] ?? 0) + 1;
-  }
-  
-  print("\Frecuencia de palabras:");
-  frecuencia.forEach((palabra, conteo) {
-    print("$palabra: $conteo");
-  });
+  Map<String, int> frecuencia = calcularFrecuencia(frase);  
+  imprimirFrecuencia(frecuencia);
 }
