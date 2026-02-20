@@ -34,8 +34,13 @@ void main() {
           print("Fondos insuficientes.");
         }
         break;
+      case 0:
+        print("Saliendo del sistema...");
+        break;
+      default:
+        print("Opción no válida. Intente nuevamente.");
     }
   } while (opcion != 0);
 
-  print("Gracias por usar el sistema.");
+  print("\nGracias por usar el sistema.");
 }
